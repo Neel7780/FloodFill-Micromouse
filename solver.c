@@ -4,14 +4,12 @@
 
 #define UNREACHABLE 255
 
-// Global variables for maze state
 static int distance[MAZE_HEIGHT][MAZE_WIDTH];
 static int wall_map[MAZE_HEIGHT][MAZE_WIDTH]; // Store wall information
 static int mouse_x = 0;
 static int mouse_y = 0;
 static Heading mouse_direction = NORTH;
 
-// Queue implementation
 void initQueue(Queue* q) {
     q->front = -1;
     q->rear = -1;
@@ -37,9 +35,6 @@ Cell dequeue(Queue* q) {
     return item;
 }
 
-// --- Floodfill Algorithm ---
-
-// Initialize the distance grid
 void initialize_distances() {
     for (int i = 0; i < MAZE_HEIGHT; i++) {
         for (int j = 0; j < MAZE_WIDTH; j++) {

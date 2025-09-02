@@ -54,6 +54,21 @@ void run_floodfill() {
 
 This algorithm was tested using the open-source micromouse simulator **mms**.
 
+## Project Structure
+
+*   `main.c`: Main entry point of the program, contains the main loop for the micromouse.
+*   `solver.c`: Implements the Floodfill algorithm logic.
+*   `solver.h`: Header file for the solver.
+*   `API.c`: Handles the communication with the simulator or the physical robot.
+*   `API.h`: Header file for the API.
+*   `a.out`: Compiled executable file
+
+## Future Work/Improvements
+
+*   **Diagonal Movement**: The current implementation only allows for horizontal and vertical movement. Adding diagonal movement could lead to shorter paths.
+*   **Path Smoothing**: The current algorithm can sometimes produce paths with unnecessary turns. Implementing a path smoothing algorithm would make the mouse's movement more efficient.
+*   **Advanced Exploration Strategies**: The current exploration strategy is quite simple. More advanced strategies could be implemented to explore the maze more efficiently.
+
 ## References
 
 The `mms` simulator can be found on GitHub: [https://github.com/micromouseonline/mms](https://github.com/micromouseonline/mms)
